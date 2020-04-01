@@ -15,7 +15,7 @@ public class Main {
 
         for (int i=0;i<num;i++){
             double saldo = sc.nextDouble();
-           // contas.add(new ContaCorrente(saldo));
+            contas.add(new ContaCorrente(saldo));
         }
 
         contas.forEach((conta) -> System.out.println(conta.getSaldo()));
