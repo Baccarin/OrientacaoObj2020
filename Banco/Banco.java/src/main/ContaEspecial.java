@@ -5,8 +5,6 @@ public class ContaEspecial extends ContaCorrente{
     protected Double limiteEmprestimo;
 
 
- 
-
     public ContaEspecial(Double saldo,Integer numero, Pessoa titular,Double limiteEmprestimo){
         super(saldo, numero, titular);
         this.limiteEmprestimo = limiteEmprestimo;

@@ -6,8 +6,8 @@ public class ContaCorrente {
     protected Integer numero;
     protected Pessoa titular;
 
-    public ContaCorrente (Double saldo){
-        this.saldo = saldo;
+    public ContaCorrente (){
+        
     }
 
     public ContaCorrente(Double saldo, Integer numero, Pessoa titular){
