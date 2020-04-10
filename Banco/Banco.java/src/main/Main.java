@@ -3,12 +3,15 @@ package main;
 import java.util.Scanner;
 import Lista01.*;
 import Lista02.*;
+import Lista04.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
 
             Scanner sc = new Scanner(System.in);
 
+           /*
+           
             Circulo circulo01 = new Circulo(sc.nextDouble()); // exercicio 02 Lista01.
     
             System.out.println(circulo01.area());
@@ -40,7 +43,13 @@ public class Main {
  
 
             casa.toString(casa); // exercicio 05  Lista02.
-            
+
+            */
+
+            Banco banco = new Banco("Banco 01",5);
+
+            banco.toString(banco);
+
             sc.close();
         
     }

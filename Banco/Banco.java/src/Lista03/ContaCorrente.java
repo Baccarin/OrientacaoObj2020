@@ -2,8 +2,8 @@ package Lista03;
 
 public class ContaCorrente {
 
-    protected Double saldo;
-    protected Double limite;
+    protected Double saldo = 0.00;
+    protected Double limite = 0.00;
 
     public ContaCorrente (){
 
@@ -43,6 +43,12 @@ public class ContaCorrente {
 
     public void setLimite(Double limite) {
         this.limite = limite;
+    }
+
+    public void toString(ContaCorrente conta){
+        System.out.println(conta.getLimite());
+        System.out.println(conta.getSaldo());
+        
     }
 
 }
