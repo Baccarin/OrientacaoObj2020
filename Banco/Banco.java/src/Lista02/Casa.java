@@ -1,71 +1,74 @@
 package Lista02;
 
+import java.util.ArrayList;
+
 public class Casa {
 
-    String endereco;
-    String cor;
-    Integer numero;
-    
-    protected Double preco;
+    private String cor;
+    private ArrayList<Porta> portas;
 
     public Casa(){
 
     }
 
-    public Casa(String endereco, String cor, Integer numero,Double preco){
-        this.endereco = endereco;
+    public Casa(String cor){
         this.cor = cor;
-        this.numero = numero;
-        this.preco = preco;
     }
 
-    public String getEndereco() {
-        return this.endereco;
+    public Casa (Integer numeroDePortas){
+        portas = new ArrayList<Porta>();
+        for (int i=0;i<numeroDePortas; i++){
+            Porta porta = new Porta();
+            portas.add(porta);
+        }  
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void pintaCasa(String cor){
+        this.cor = cor;
+        System.out.println("A casa foi pintada de: " + cor );
+    }
+
+    public void adicionaPorta(Porta porta){
+        portas.add(porta);
+    }
+
+    public Integer numeroPortas(){
+        return portas.size();
+    }
+
+    public int portasAbertas(){
+        int numPortasAbertas = 0;
+        for (Porta porta : portas) {
+            if (porta.estaAberta()){
+                numPortasAbertas++;
+            }
+        }
+        return numPortasAbertas;
+    }
+
+    public int portasFechadas(){
+        int numPortasFechadas = 0;
+        for (Porta porta : portas) {
+            if (!porta.estaAberta()){
+                numPortasFechadas++;
+            }
+        }
+        return numPortasFechadas;
+    }
+
+    public ArrayList<Porta> getPortas() {
+        return this.portas;
     }
 
     public String getCor() {
         return this.cor;
     }
 
-    public void pintaCasa(String cor) {
-        this.cor = cor;
+    public void toString(Casa casa){
+        System.out.println(casa.getCor());
+        System.out.println(casa.numeroPortas());
+        System.out.println(casa.portasAbertas());
+        System.out.println(casa.portasFechadas());
     }
-
-    public Integer getNumero() {
-        return this.numero;
-    }
-
-    public void setNumero(Integer numero) {
-        this.numero = numero;
-    }
-
-
-
-   /* public void compraCasa(Pessoa dono, ContaCorrente contaComprador,ContaCorrente contaVendedor, Double valor) {
-        if(validaCompra(contaComprador, valor)){
-            this.dono = dono;
-            contaComprador.saque(valor);
-            contaVendedor.deposito(valor);
-        }
-     }*/
-
-    public Double getPreco() {
-        return this.preco;
-    }
-
-    public void setPreco(Double preco) {
-        this.preco = preco;
-    }
-
-   /* public boolean validaCompra(ContaCorrente conta, Double valor){
-        if (conta.getSaldo() < valor){
-            return false;
-        }
-        return true;
-    }*/
 
 }
