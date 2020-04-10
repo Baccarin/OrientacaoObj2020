@@ -40,7 +40,7 @@ public class Main {
  
 
             casa.toString(casa); // exercicio 05  Lista02.
-
+            
             sc.close();
         
     }

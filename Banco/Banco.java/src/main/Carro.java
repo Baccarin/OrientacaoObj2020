@@ -57,7 +57,7 @@ public class Carro {
         return this.dono;
     }
 
-    public boolean validaCompra(ContaCorrente conta, Double valor){
+    /*public boolean validaCompra(ContaCorrente conta, Double valor){
         if (conta.getSaldo() < valor){
             return false;
         }
@@ -70,7 +70,7 @@ public class Carro {
            contaComprador.saque(valor);
            contaVendedor.deposito(valor);
        }
-    }
+    }*/
     
 
 

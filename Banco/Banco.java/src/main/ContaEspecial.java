@@ -1,6 +1,6 @@
 package main;
 
-public class ContaEspecial extends ContaCorrente{
+/*public class ContaEspecial extends ContaCorrente{
 
     protected Double limiteEmprestimo;
 
@@ -30,4 +30,4 @@ public class ContaEspecial extends ContaCorrente{
             saldo += valor;
         }
     }
-}
+}*/
